@@ -25,17 +25,17 @@
 
     <TextView
         android:id="@+id/tvLogInTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_width="324dp"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:lineHeight="20dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="@font/montserrat"
+        android:lineHeight="20dp"
         android:text="войдите в свою учетную запись, чтобы получить доступ к подбору средств"
-        android:textSize="14sp"
-        android:textColor="@color/title_grey"
         android:textAlignment="center"
+        android:textColor="@color/title_grey"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogIn" />
@@ -45,35 +45,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="287dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Почта"
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogInTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edEmail"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:boxBackgroundColor="#33C4C4C4"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="31dp"
+        app:boxBackgroundColor="#33C4C4C4"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
             android:hint="Введите почту"
@@ -94,12 +94,13 @@
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edEmail" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edPassword"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
@@ -119,15 +120,15 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
             android:hint="Введите пароль"
-            android:textColorLink="@color/greenTheme"
             android:inputType="textPassword"
+            android:textColorLink="@color/greenTheme"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/cbApply"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
@@ -143,7 +144,7 @@
 
     <Button
         android:id="@+id/btnLogIn"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="31dp"
         android:layout_marginTop="100dp"
@@ -159,7 +160,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="7dp"

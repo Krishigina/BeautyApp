@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_drawable"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout_editor_absoluteX="-203dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/ivSplashImage"
@@ -69,6 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
+        android:contentDescription="@string/nextScreenText"
         app:layout_constraintEnd_toEndOf="@+id/ivNavigationSplash"
         app:layout_constraintStart_toStartOf="@+id/ivNavigationSplash"
         app:layout_constraintTop_toBottomOf="@+id/ivNavigationSplash"

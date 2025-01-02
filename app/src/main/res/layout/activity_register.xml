@@ -22,9 +22,11 @@
 
     <TextView
         android:id="@+id/tvLogInTitle"
-        android:layout_width="324dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
         android:fontFamily="@font/montserrat"
         android:lineHeight="20dp"
         android:text="создайте новую учетную запись"
@@ -40,35 +42,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="300dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Имя"
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogInTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiName"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:boxBackgroundColor="#33C4C4C4"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="31dp"
+        app:boxBackgroundColor="#33C4C4C4"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
             android:hint="Введите имя"
@@ -88,28 +90,28 @@
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiName" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edEmail"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:boxBackgroundColor="#33C4C4C4"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="31dp"
+        app:boxBackgroundColor="#33C4C4C4"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
             android:hint="Введите почту"
@@ -122,19 +124,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="276dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Пароль"
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edEmail" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edPassword"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
@@ -172,12 +175,13 @@
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edPassword" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edPassword2"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
@@ -204,8 +208,8 @@
 
     <CheckBox
         android:id="@+id/cbApply"
-        android:layout_width="301dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
@@ -218,7 +222,7 @@
 
     <Button
         android:id="@+id/btnLogIn"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="31dp"
         android:layout_marginTop="16dp"
@@ -234,7 +238,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="7dp"
