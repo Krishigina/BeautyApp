@@ -15,7 +15,7 @@
         android:theme="@style/Theme.BeautyApp"
         tools:targetApi="31">
         <activity
-            android:name=".Splash"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

@@ -5,25 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Splash">
+    tools:context=".SplashActivity">
 
     <View
         android:id="@+id/vGradientBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_drawable" />
+        android:background="@drawable/gradient_drawable"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivSplashImage"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/splash_image" />
 
+    <TextView
+        android:id="@+id/tvWelcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/welcome_text"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSplashImage" />
 
+    <TextView
+        android:id="@+id/tvExplainText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/montserrat"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/welcome_text2"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvWelcomeText"
+        app:layout_constraintStart_toStartOf="@+id/tvWelcomeText"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeText" />
+
+    <ImageView
+        android:id="@+id/ivNavigationSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvExplainText"
+        app:layout_constraintStart_toStartOf="@+id/tvExplainText"
+        app:layout_constraintTop_toBottomOf="@+id/tvExplainText"
+        app:srcCompat="@drawable/splash_navigation" />
+
+    <ImageView
+        android:id="@+id/ivButtonArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNavigationSplash"
+        app:layout_constraintStart_toStartOf="@+id/ivNavigationSplash"
+        app:layout_constraintTop_toBottomOf="@+id/ivNavigationSplash"
+        app:srcCompat="@drawable/circular_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
