@@ -11,8 +11,10 @@ activity = "1.9.3"
 constraintlayout = "2.2.0"
 firebaseAuth = "23.1.0"
 firebaseDatabase = "21.0.0"
+materialVersion = "material"
 
 [libraries]
+android-material = { module = "com.google.android:material", version.ref = "materialVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

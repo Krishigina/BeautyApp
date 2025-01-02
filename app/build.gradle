@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.example.beautyapp'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.beautyapp"
@@ -49,5 +49,5 @@ dependencies {
     implementation libs.firebase.auth
     implementation libs.firebase.database
 
-    implementation 'com.google.android:material:material:1.9.0'
+//    implementation libs.android.material
 }
