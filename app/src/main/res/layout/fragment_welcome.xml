@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/welcome_text"
@@ -37,13 +38,13 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivSplashImage" />
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <TextView
         android:id="@+id/tvExplainText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/montserrat"
         android:lineSpacingExtra="4sp"
         android:text="@string/welcome_text2"
@@ -57,7 +58,7 @@
         android:id="@+id/ivNavigationSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/tvExplainText"
         app:layout_constraintStart_toStartOf="@+id/tvExplainText"
         app:layout_constraintTop_toBottomOf="@+id/tvExplainText"
@@ -73,5 +74,12 @@
         app:layout_constraintStart_toStartOf="@+id/ivNavigationSplash"
         app:layout_constraintTop_toBottomOf="@+id/ivNavigationSplash"
         app:srcCompat="@drawable/circular_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.536643" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

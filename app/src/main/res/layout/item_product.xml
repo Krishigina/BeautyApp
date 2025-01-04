@@ -9,15 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
         <LinearLayout
             android:layout_width="266dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:orientation="vertical">
 
             <!-- Изображение продукта -->
             <RelativeLayout
@@ -25,62 +25,73 @@
                 android:layout_height="200dp">
 
                 <!-- Иконка "избранное" -->
+
                 <ImageView
-                    android:id="@+id/product_image"
+                    android:id="@+id/ivProduct"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/product_item" />
+                    android:src="@drawable/product_item"
+                    android:padding="0dp"/>
 
                 <ImageButton
-                    android:id="@+id/favorite_button"
+                    android:id="@+id/ivLikedProduct"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_margin="8dp"
                     android:background="?android:selectableItemBackgroundBorderless"
                     android:scaleType="center"
-                    android:src="" />
+                    android:scaleX="1.6"
+                    android:scaleY="1.6"
+                    android:src="@drawable/ic_dont_liked_product" />
             </RelativeLayout>
 
             <!-- Текстовые данные -->
             <TextView
-                android:id="@+id/product_title"
+                android:id="@+id/tvProductTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:maxLines="1"
                 android:text="Granactive Retinoid 5%"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textColor="#181717"
+                android:textSize="18sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
 
-            <TextView
-                android:id="@+id/product_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:text="Эмульсия с 5% улучшенной формы ретинола The Ordinary..."
-                android:textColor="#757575"
-                android:textSize="14sp" />
-
-            <!-- Цена и кнопка перехода -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="12dp">
 
-                <ImageButton
-                    android:id="@+id/action_button"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="?android:selectableItemBackgroundBorderless"
-                    android:scaleType="center"
-                    android:src="@drawable/circular_button" />
+                <TextView
+                    android:id="@+id/tvProductDescription"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
+                    android:maxLines="3"
+                    android:text="Эмульсия с 5% улучшенной формы ретинола The Ordinary 5% emy"
+                    android:textColor="#757575"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ivButtonNextProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    app:srcCompat="@drawable/circular_button" />
             </LinearLayout>
+
+            <!-- Цена и кнопка перехода -->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

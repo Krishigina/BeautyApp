@@ -10,6 +10,8 @@
         android:id="@+id/bnvNavigation"
         android:background="@color/white"
         app:labelVisibilityMode="unlabeled"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemRippleColor="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"

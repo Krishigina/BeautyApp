@@ -48,6 +48,27 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.070063695" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25531915" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99763596" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21276596" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etSearch"
         android:layout_width="0dp"
@@ -86,165 +107,382 @@
         app:layout_constraintTop_toBottomOf="@+id/evNotification"
         app:srcCompat="@drawable/ic_scan" />
 
-    <TextView
-        android:id="@+id/tvTitleCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="Подобрали для вас"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21276596" />
-
-    <TextView
-        android:id="@+id/tvSeeAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/see_all"
-        android:textColor="@color/greenTheme"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTitleCategory"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25531915" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="38dp"
+        android:layout_height="0dp"
         android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline5">
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
 
         <LinearLayout
-            android:id="@+id/llCategory"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/guideline5">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvGel"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="12dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="30dp"
-                tools:layout_editor_absoluteX="91dp"
-                tools:layout_editor_absoluteY="373dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvGel"
+                    android:id="@+id/tvTitleCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
-                    android:text="Гель для умывания"
-                    android:textAlignment="center"
-                    android:textColor="@color/grayText" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvTonik"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="12dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="30dp"
-                tools:layout_editor_absoluteX="91dp"
-                tools:layout_editor_absoluteY="373dp">
+                    android:text="Подобрали для вас"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tvTonik"
+                    android:id="@+id/tvSeeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="Тоник"
-                    android:textAlignment="center"
-                    android:textColor="@color/grayText" />
-            </androidx.cardview.widget.CardView>
+                    android:text="@string/see_all"
+                    android:textColor="@color/greenTheme"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvMuss"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="12dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="30dp"
-                tools:layout_editor_absoluteX="91dp"
-                tools:layout_editor_absoluteY="373dp">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvGel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="30dp"
+                        tools:layout_editor_absoluteX="91dp"
+                        tools:layout_editor_absoluteY="373dp">
+
+                        <TextView
+                            android:id="@+id/tvGel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Гель для умывания"
+                            android:textAlignment="center"
+                            android:textColor="@color/grayText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvTonik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="30dp"
+                        tools:layout_editor_absoluteX="91dp"
+                        tools:layout_editor_absoluteY="373dp">
+
+                        <TextView
+                            android:id="@+id/tvTonik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Тоник"
+                            android:textAlignment="center"
+                            android:textColor="@color/grayText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvMuss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="30dp"
+                        tools:layout_editor_absoluteX="91dp"
+                        tools:layout_editor_absoluteY="373dp">
+
+                        <TextView
+                            android:id="@+id/tvMuss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Мусс"
+                            android:textAlignment="center"
+                            android:textColor="@color/grayText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvOil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="30dp"
+                        tools:layout_editor_absoluteX="91dp"
+                        tools:layout_editor_absoluteY="373dp">
+
+                        <TextView
+                            android:id="@+id/tvOil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Масло"
+                            android:textAlignment="center"
+                            android:textColor="@color/grayText" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCosmeticProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvMuss"
+                    android:id="@+id/tvTitleArticle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
-                    android:text="Мусс"
-                    android:textAlignment="center"
-                    android:textColor="@color/grayText" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvOil"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="center"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="30dp"
-                tools:layout_editor_absoluteX="91dp"
-                tools:layout_editor_absoluteY="373dp">
+                    android:text="Полезно знать"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tvOil"
+                    android:id="@+id/tvSeeAllArticle2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="Масло"
-                    android:textAlignment="center"
-                    android:textColor="@color/grayText" />
-            </androidx.cardview.widget.CardView>
+                    android:text="@string/see_all"
+                    android:textColor="@color/greenTheme"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCardArticle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/article_image" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCardArticle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="2"
+                                android:text="Как сохранить выработку коллагена  в коже?"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvCardDesription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="3"
+                                android:text="Коллаген - белок, составляющий основу соединительной ткани организма и обеспечивающий ее прочность и эластичность кожи лица"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivArrowCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_arrow_left_article" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCardArticle2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/article_image" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCardArticle2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="2"
+                                android:text="Как сохранить выработку коллагена  в коже?"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvCardDesription2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="3"
+                                android:text="Коллаген - белок, составляющий основу соединительной ткани организма и обеспечивающий ее прочность и эластичность кожи лица"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivArrowCard2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_arrow_left_article" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCardArticle3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/article_image" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCardArticle3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="2"
+                                android:text="Как сохранить выработку коллагена  в коже?"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvCardDesription3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="3"
+                                android:text="Коллаген - белок, составляющий основу соединительной ткани организма и обеспечивающий ее прочность и эластичность кожи лица"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivArrowCard3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_arrow_left_article" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
-    </HorizontalScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCosmeticProduct"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
