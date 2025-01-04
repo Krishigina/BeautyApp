@@ -2,23 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:backgroundTint="@color/white"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.register.RegisterFragment">
 
     <TextView
         android:id="@+id/tvLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="141dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/montserrat"
-        android:text="С Возвращением"
+        android:text="Зарегистрироваться"
         android:textColor="@color/title_black"
-        android:textSize="26sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,12 +23,12 @@
         android:id="@+id/tvLogInTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="64dp"
         android:fontFamily="@font/montserrat"
         android:lineHeight="20dp"
-        android:text="войдите в свою учетную запись, чтобы получить доступ к подбору средств"
+        android:text="создайте новую учетную запись"
         android:textAlignment="center"
         android:textColor="@color/title_grey"
         android:textSize="14sp"
@@ -41,23 +37,64 @@
         app:layout_constraintTop_toBottomOf="@+id/tvLogIn" />
 
     <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="300dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Имя"
+        android:textColor="@color/black50"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogInTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="31dp"
+        app:boxBackgroundColor="#33C4C4C4"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_light"
+            android:hint="Введите имя"
+            android:textColorLink="@color/greenTheme"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="287dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Почта"
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogInTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tiName" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edEmail"
+        android:id="@+id/etSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
@@ -77,13 +114,56 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
             android:hint="Введите почту"
-            android:textColorHint="@color/greenTheme"
             android:textColorLink="@color/greenTheme"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="276dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Пароль"
+        android:textColor="@color/black50"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="29dp"
+        app:boxBackgroundColor="#33C4C4C4"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_light"
+            android:hint="Введите пароль"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
@@ -94,12 +174,12 @@
         android:textColor="@color/black50"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edPassword"
+        android:id="@+id/edPassword2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
@@ -112,16 +192,15 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword2"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_light"
-            android:hint="Введите пароль"
+            android:hint="Повторите пароль"
             android:inputType="textPassword"
-            android:textColorLink="@color/greenTheme"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -132,26 +211,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="195dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/montserrat_light"
-        android:text="Запомнить меня"
-        android:textColorLink="@color/greenTheme"
-        android:textSize="12sp"
+        android:text="Устанавливая флажок, вы соглашаетесь с нашими Правилами и условиями"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edPassword"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/edPassword2" />
 
     <Button
-        android:id="@+id/btnLogIn"
+        android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="31dp"
         android:backgroundTint="@color/greenTheme"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Войти"
+        android:text="Зарегистрироваться"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -165,12 +242,10 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="31dp"
-        android:text="Еще нет аккаунта? Зарегистрироваться"
+        android:text="@string/register_text"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
         tools:ignore="MissingConstraints" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
