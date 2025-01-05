@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/miHome"
+        android:id="@+id/homepageFragment"
         android:title="Главная"
         android:icon="@drawable/ic_bottom_menu_home"
     />
     <item
-        android:id="@+id/miSearch"
+        android:id="@+id/searchpageFragment"
         android:title="Поиск"
         android:icon="@drawable/ic_bottom_menu_search"
         />
@@ -23,7 +23,7 @@
         android:icon="@drawable/ic_bottom_menu_doctor"
         />
     <item
-        android:id="@+id/miAccount"
+        android:id="@+id/profileFragment"
         android:title="Аккаунт"
         android:icon="@drawable/ic_bottom_menu_profile"
         />

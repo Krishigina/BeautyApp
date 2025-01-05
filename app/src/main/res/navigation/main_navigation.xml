@@ -9,4 +9,14 @@
         android:id="@+id/homepageFragment"
         android:name="com.example.beautyapp.ui.homepage.HomepageFragment"
         android:label="HomepageFragment" />
+    <fragment
+        android:id="@+id/searchpageFragment"
+        android:name="com.example.beautyapp.ui.searchpage.SearchpageFragment"
+        android:label="fragment_searchpage"
+        tools:layout="@layout/fragment_searchpage" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.beautyapp.ui.profilepage.ProfilepageFragment"
+        android:label="fragment_profilepage"
+        tools:layout="@layout/fragment_profilepage" />
 </navigation>

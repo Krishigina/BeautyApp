@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.ui.setupWithNavController
+import com.example.beautyapp.R
 import com.example.beautyapp.databinding.FragmentMainBinding
 
 
@@ -13,8 +16,6 @@ class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,6 +30,16 @@ class MainFragment : Fragment() {
         val root: View = binding.root
 
         return root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val navController = Navigation.findNavController(requireActivity(), R.id.mainContainerFragment)
+        binding.bnvNavigation.setupWithNavController(navController)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 
