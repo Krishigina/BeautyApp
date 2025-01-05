@@ -1,21 +1,22 @@
 package com.example.beautyapp.ui.login
 
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.beautyapp.R
 import com.example.beautyapp.databinding.FragmentLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -28,11 +29,6 @@ class LoginFragment : Fragment() {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
         return root
     }
 
@@ -43,7 +39,28 @@ class LoginFragment : Fragment() {
         }
 
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_login_to_mainFragment)
+            if (binding.etEmail.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Не все обязательные поля формы заполнены", Toast.LENGTH_LONG).show()
+            }
+            else {
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                    binding.etEmail.text.toString(),
+                    binding.etPassword.text.toString()
+                )
+                    .addOnCompleteListener() { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(requireContext(), "Успешный вход", Toast.LENGTH_SHORT)
+                                .show()
+                            findNavController().navigate(R.id.action_navigation_login_to_mainFragment)
+                        } else {
+                            Toast.makeText(
+                                requireContext(),
+                                "Ошибка авторизации: ${task.exception?.message}",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+            }
         }
 
     }
