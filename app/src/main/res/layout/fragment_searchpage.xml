@@ -75,7 +75,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toStartOf="@+id/ivScan"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleApp">
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleApp"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

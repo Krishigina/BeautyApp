@@ -52,7 +52,6 @@ class RegisterFragment : Fragment() {
                     binding.etPassword.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        // Получаем текущего пользователя
                         val currentUser = FirebaseAuth.getInstance().currentUser
                         currentUser?.let {
                             val userInfo = hashMapOf(
@@ -61,7 +60,6 @@ class RegisterFragment : Fragment() {
                                 "password" to binding.etPassword.text.toString()
                             )
 
-                            // Сохраняем данные в Firebase Realtime Database
                             FirebaseDatabase.getInstance().getReference("Users")
                                 .child(it.uid)
                                 .setValue(userInfo)

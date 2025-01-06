@@ -66,7 +66,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName">
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
@@ -108,7 +109,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail">
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -151,7 +153,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -196,7 +199,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword2"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etControlPassword"
