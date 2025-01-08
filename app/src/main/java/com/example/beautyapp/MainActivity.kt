@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.beautyapp.databinding.ActivityMainBinding
 import com.example.beautyapp.ui.login.LoginFragment
+import com.example.beautyapp.utils.SharedPrefsManager
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             // Замена текущего фрагмента на LoginFragment
             navController.navigate(R.id.navigation_welcome)
         }
+        SharedPrefsManager.init(this)
 
     }
 }
