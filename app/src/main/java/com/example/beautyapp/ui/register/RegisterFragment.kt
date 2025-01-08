@@ -43,6 +43,7 @@ class RegisterFragment : Fragment() {
             }
         }
 
+
         binding.tvRegister.setOnClickListener {
             findNavController().popBackStack()
         }
