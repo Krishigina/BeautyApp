@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import com.example.beautyapp.databinding.FragmentProfilepageBinding
 
 class ProfilepageFragment: Fragment() {
 
     private var _binding: FragmentProfilepageBinding? = null
-
+    private val viewModel: ProfilepageViewModel by viewModels()
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,8 +19,6 @@ class ProfilepageFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(ProfilepageViewModel::class.java)
 
         _binding = FragmentProfilepageBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -30,6 +28,10 @@ class ProfilepageFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.profileName.observe(viewLifecycleOwner) {
+            binding.tvProfileName.text = it
+        }
     }
 
     override fun onDestroyView() {
