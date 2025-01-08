@@ -3,6 +3,7 @@ package com.example.beautyapp.ui.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.beautyapp.utils.SharedPrefsManager
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginViewModel : ViewModel() {
@@ -24,6 +25,7 @@ class LoginViewModel : ViewModel() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     _loginResult.value = true
+                    SharedPrefsManager.setUserAuthorized(true)
                 } else {
                     _errorMessage.value = "Ошибка авторизации: ${task.exception?.message}"
                     _loginResult.value = false
