@@ -47,7 +47,7 @@ class LoginFragment : Fragment() {
                     binding.etEmail.text.toString(),
                     binding.etPassword.text.toString()
                 )
-                    .addOnCompleteListener() { task ->
+                    .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(requireContext(), "Успешный вход", Toast.LENGTH_SHORT)
                                 .show()

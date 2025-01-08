@@ -2,6 +2,7 @@
   "project_info": {
     "project_number": "646629577006",
     "project_id": "beautyapp-60f9a",
+    "firebase_url": "https://beautyapp-60f9a-default-rtdb.europe-west1.firebasedatabase.app",
     "storage_bucket": "beautyapp-60f9a.firebasestorage.app"
   },
   "client": [

@@ -83,10 +83,8 @@
             android:layout_height="match_parent"
             android:drawableStart="@drawable/ic_search_line"
             android:drawableEnd="@drawable/ic_filter"
-            android:fontFamily="@font/montserrat_light"
+            android:fontFamily="@font/montserrat"
             android:hint="Поиск"
-            android:textColorHint="@color/greenTheme"
-            android:textColorLink="@color/greenTheme"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
