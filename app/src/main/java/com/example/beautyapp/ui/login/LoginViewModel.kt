@@ -24,8 +24,9 @@ class LoginViewModel : ViewModel() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    _loginResult.value = true
+
                     SharedPrefsManager.setUserAuthorized(true)
+                    _loginResult.value = true
                 } else {
                     _errorMessage.value = "Ошибка авторизации: ${task.exception?.message}"
                     _loginResult.value = false

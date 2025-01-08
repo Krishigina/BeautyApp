@@ -20,19 +20,13 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
 
+        SharedPrefsManager.init(this)
+
+
         enableEdgeToEdge()
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        navController = navHostFragment.navController
-
-
-        if (FirebaseAuth.getInstance().currentUser == null) {
-            navController.navigate(R.id.navigation_welcome)
-        }
-        SharedPrefsManager.init(this)
 
     }
 }

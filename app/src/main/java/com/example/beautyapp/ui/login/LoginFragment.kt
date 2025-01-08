@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.beautyapp.R
 import com.example.beautyapp.databinding.FragmentLoginBinding
+import com.example.beautyapp.utils.SharedPrefsManager
 
 class LoginFragment : Fragment() {
 
@@ -34,6 +35,7 @@ class LoginFragment : Fragment() {
             if (isSuccess) {
                 Toast.makeText(requireContext(), "Успешный вход", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_navigation_login_to_mainFragment)
+
             }
         }
 

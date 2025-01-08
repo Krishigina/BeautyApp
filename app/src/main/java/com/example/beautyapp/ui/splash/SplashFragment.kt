@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.beautyapp.databinding.FragmentSplashBinding
-import com.example.beautyapp.ui.searchpage.SearchpageViewModel
 
 class SplashFragment : Fragment() {
+
     private var _binding: FragmentSplashBinding? = null
     private lateinit var splashViewModel: SplashViewModel
 
@@ -27,14 +27,17 @@ class SplashFragment : Fragment() {
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        splashViewModel.checkUserAuthorization(findNavController())
+        // Запускаем проверку авторизации
+        splashViewModel.checkUserAuthorization()
 
+        // Наблюдаем за изменением состояния навигации
         splashViewModel.navigateTo.observe(viewLifecycleOwner) { destinationId ->
             destinationId?.let {
                 findNavController().navigate(it)
-                splashViewModel.onNavigationComplete()
+                splashViewModel.onNavigationComplete() // Сбрасываем состояние навигации
             }
         }
+
         return root
     }
 

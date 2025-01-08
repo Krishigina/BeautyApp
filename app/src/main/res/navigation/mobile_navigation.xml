@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_welcome">
+    app:startDestination="@+id/splashFragment">
 
     <fragment
         android:id="@+id/navigation_login"
@@ -41,7 +41,13 @@
         android:id="@+id/mainFragment"
         android:name="com.example.beautyapp.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_navigation_welcome"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:destination="@id/navigation_welcome" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.beautyapp.ui.splash.SplashFragment"
@@ -51,7 +57,7 @@
             android:id="@+id/action_splashFragment_to_navigation_welcome"
             app:destination="@id/navigation_welcome" />
         <action
-            android:id="@+id/action_splashFragment_to_mainFragment2"
+            android:id="@+id/action_splashFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 

@@ -3,6 +3,7 @@ package com.example.beautyapp.ui.register
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.beautyapp.utils.SharedPrefsManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -44,6 +45,7 @@ class RegisterViewModel : ViewModel() {
                             .addOnCompleteListener { databaseTask ->
                                 if (databaseTask.isSuccessful) {
                                     _registrationResult.value = true
+                                    SharedPrefsManager.setUserAuthorized(true)
                                 } else {
                                     _errorMessage.value = "Ошибка сохранения данных: ${databaseTask.exception?.message}"
                                     _registrationResult.value = false
