@@ -5,12 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.beautyapp.utils.SharedPrefsManager
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterViewModel : ViewModel() {
 
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
-    private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
     private val _registrationResult = MutableLiveData<Boolean>()
     val registrationResult: LiveData<Boolean> get() = _registrationResult
@@ -35,19 +35,19 @@ class RegisterViewModel : ViewModel() {
                     val currentUser = auth.currentUser
                     currentUser?.let {
                         val userInfo = hashMapOf(
+                            "uid" to it.uid,
                             "email" to email,
-                            "username" to name,
-                            "password" to password
+                            "username" to name
                         )
-                        database.getReference("Users")
-                            .child(it.uid)
-                            .setValue(userInfo)
-                            .addOnCompleteListener { databaseTask ->
-                                if (databaseTask.isSuccessful) {
+                        firestore.collection("Users")
+                            .document(it.uid)
+                            .set(userInfo)
+                            .addOnCompleteListener { firestoreTask ->
+                                if (firestoreTask.isSuccessful) {
                                     _registrationResult.value = true
                                     SharedPrefsManager.setUserAuthorized(true)
                                 } else {
-                                    _errorMessage.value = "Ошибка сохранения данных: ${databaseTask.exception?.message}"
+                                    _errorMessage.value = "Ошибка сохранения данных: ${firestoreTask.exception?.message}"
                                     _registrationResult.value = false
                                 }
                             }
