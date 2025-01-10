@@ -30,7 +30,7 @@
                     android:id="@+id/ivProduct"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
+                    android:scaleType="centerInside"
                     android:src="@drawable/product_item"
                     android:padding="0dp"/>
 

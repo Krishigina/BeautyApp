@@ -8,7 +8,11 @@
         tools:layout="@layout/fragment_homepage"
         android:id="@+id/homepageFragment"
         android:name="com.example.beautyapp.ui.homepage.HomepageFragment"
-        android:label="HomepageFragment" />
+        android:label="HomepageFragment" >
+        <action
+            android:id="@+id/action_homepageFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchpageFragment"
         android:name="com.example.beautyapp.ui.searchpage.SearchpageFragment"
@@ -19,4 +23,9 @@
         android:name="com.example.beautyapp.ui.profilepage.ProfilepageFragment"
         android:label="fragment_profilepage"
         tools:layout="@layout/fragment_profilepage" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.beautyapp.ui.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
 </navigation>
