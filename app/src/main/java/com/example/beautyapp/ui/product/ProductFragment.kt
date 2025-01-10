@@ -27,7 +27,6 @@ class ProductFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Получение данных из аргументов фрагмента
         arguments?.let {
              product = it.getParcelable("object")!!
         }
@@ -46,16 +45,15 @@ class ProductFragment : Fragment() {
 
         product.image?.let {
             if (it.isNotEmpty()) {
+                binding.ivProductPhoto.setImageDrawable(null)
                 setImageFromBase64(it, binding.ivProductPhoto)
             } else {
-                binding.ivProductPhoto.setImageResource(R.drawable.product_item) // Замените на ваш ресурс заглушки
+                binding.ivProductPhoto.setImageResource(R.drawable.product_empty)
             }
         }
 
         binding.tvProductname.text = product.product_name
         binding.tvProductdescription.text = product.description
-
-        // Добавьте другие привязки для элементов UI, если требуется
 
         binding.ivArrowLeftProfile.setOnClickListener { findNavController().popBackStack() }
 
@@ -69,17 +67,13 @@ class ProductFragment : Fragment() {
 
     private fun setImageFromBase64(base64String: String, imageView: android.widget.ImageView) {
         try {
-            // Декодируем строку Base64 в байты
             val decodedBytes = Base64.decode(base64String, Base64.DEFAULT)
 
-            // Преобразуем байты в Bitmap
             val bitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.size)
 
-            // Устанавливаем Bitmap в ImageView
             imageView.setImageBitmap(bitmap)
         } catch (e: Exception) {
             e.printStackTrace()
-            // Обработать ошибку в случае неверного формата Base64
         }
     }
 }

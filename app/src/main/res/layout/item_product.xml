@@ -18,21 +18,18 @@
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- Изображение продукта -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
-
-                <!-- Иконка "избранное" -->
 
                 <ImageView
                     android:id="@+id/ivProduct"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/product_item"
-                    android:padding="0dp"/>
+                    android:padding="0dp"
+                    android:scaleType="center"
+
+                    android:src="@drawable/product_empty" />
 
                 <ImageButton
                     android:id="@+id/ivLikedProduct"
@@ -47,7 +44,6 @@
                     android:src="@drawable/ic_dont_liked_product" />
             </RelativeLayout>
 
-            <!-- Текстовые данные -->
             <TextView
                 android:id="@+id/tvProductTitle"
                 android:layout_width="match_parent"
@@ -90,8 +86,6 @@
                     android:scaleY="0.7"
                     app:srcCompat="@drawable/circular_button" />
             </LinearLayout>
-
-            <!-- Цена и кнопка перехода -->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

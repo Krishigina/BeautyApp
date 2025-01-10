@@ -59,7 +59,6 @@ class ProductCardAdapter(
 
         val requestOptions = RequestOptions().transform()
 
-        // Декодирование Base64 строки
         val base64Image = productCards[position].image
         val bitmap = decodeBase64ToBitmap(base64Image)
 
@@ -70,7 +69,6 @@ class ProductCardAdapter(
                 .into(holder.binding.ivProduct)
 
         } else {
-            // Если изображение не удалось загрузить, используем плейсхолдер
             holder.binding.ivProduct.setImageResource(R.drawable.product_item)
         }
 
@@ -78,12 +76,11 @@ class ProductCardAdapter(
             val fragment = ProductFragment()
 
             val bundle = Bundle().apply {
-                putParcelable("object", productCards[position])  // Передаем данные в фрагмент
+                putParcelable("object", productCards[position])
             }
 
             fragment.arguments = bundle
 
-            // Навигация с использованием NavController
             val navController = (context as AppCompatActivity).findNavController(R.id.mainContainerFragment)
             navController.navigate(R.id.action_homepageFragment_to_productFragment, bundle)
         }

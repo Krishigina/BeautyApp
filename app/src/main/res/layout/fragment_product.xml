@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="97dp" />
+        app:layout_constraintGuide_end="37dp" />
 
     <ImageView
         android:id="@+id/ivArrowLeftProfile"
@@ -86,8 +86,9 @@
 
             <ImageView
                 android:id="@+id/ivProductPhoto"
-                android:layout_width="386dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/product_item" />
 
             <androidx.cardview.widget.CardView
@@ -118,7 +119,7 @@
             <TextView
                 android:id="@+id/tvProductname"
                 android:layout_width="match_parent"
-                android:layout_height="76dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Clinique"
@@ -127,7 +128,7 @@
             <TextView
                 android:id="@+id/tvProductdescription"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="TextView"
