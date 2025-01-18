@@ -1,6 +1,6 @@
 # Healthy Beauty App Android
 ## Overview
-This project showcases a mobile Android application designed for analyzing skin conditions and providing personalized skincare recommendations. 
+The project is under development. This project showcases a mobile Android application designed for analyzing skin conditions and providing personalized skincare recommendations. 
 It is developed as part of the coursework at Moscow Polytechnic University in the 5th semester.
 <br /> Key features include user registration and authentication with Firebase, dynamic UI built with XML and Binding, seamless navigation using Fragments, and robust data management through Firebase.
 ## Technology Stack
