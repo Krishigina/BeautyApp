@@ -27,4 +27,10 @@ It is developed as part of the coursework at Moscow Polytechnic University in th
 4. Run the application on an Android emulator or physical device.
 ## Demo
 https://github.com/user-attachments/assets/e5451ed6-d3fa-4dba-9193-e0235419248e
+## Documentation
+[Пояснительная записка.pdf](https://github.com/user-attachments/files/18465649/221-361.pdf)<br/>
+[Спецификация требований.pdf](https://github.com/user-attachments/files/18465655/default.pdf)<br/>
+[Техническое задание.pdf](https://github.com/user-attachments/files/18465656/default.pdf)
+
+
 
